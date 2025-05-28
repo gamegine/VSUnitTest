@@ -39,7 +39,10 @@ jobs:
 #    needs: build
 #    runs-on: windows-latest
 #    steps:
+    - name: ls
+      run: dir x64\\Release\\
     - name: Run tests
       uses: microsoft/vstest-action@v1.0.0
       with:
+        testAssembly: "x64\\Release\\*.dll"
         runInParallel: true
