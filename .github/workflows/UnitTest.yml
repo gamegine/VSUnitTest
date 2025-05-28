@@ -42,7 +42,8 @@ jobs:
     - name: ls
       run: dir x64\\Release\\
     - name: Run tests
-      uses: microsoft/vstest-action@v1.0.0
+      #uses: microsoft/vstest-action@v1.0.0
+      uses: josepho0918/vstest-action@master
       with:
         testAssembly: "x64\\Release\\*.dll"
         runInParallel: true
