@@ -43,7 +43,7 @@ jobs:
       run: dir x64\\Release\\
     - name: Run tests
       #uses: microsoft/vstest-action@v1.0.0
-      uses: josepho0918/vstest-action@master
+      uses: josepho0918/vstest-action@main
       with:
         testAssembly: "x64\\Release\\*.dll"
         runInParallel: true
