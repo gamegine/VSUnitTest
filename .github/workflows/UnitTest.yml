@@ -38,6 +38,7 @@ jobs:
         key: ${{ runner.os }}-${{env.BUILD_PLATFORM}}${{env.BUILD_CONFIGURATION}}-${{ hashFiles('**/*.vcxproj') }}
 
     - name: ls
+      continue-on-error: true
       run: dir VSUnitTest\\x64\\Release\\
       
     - name: Build
