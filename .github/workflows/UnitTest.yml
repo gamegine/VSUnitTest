@@ -35,10 +35,10 @@ jobs:
       uses: actions/cache@v4.2.3
       with:
         path: "**\\${{env.BUILD_PLATFORM}}\\${{env.BUILD_CONFIGURATION}}"
-        key: ${{ runner.os }}-${{ hashFiles('**/*.vcxproj') }}
+        key: ${{ runner.os }}-${{env.BUILD_PLATFORM}}${{env.BUILD_CONFIGURATION}}-${{ hashFiles('**/*.vcxproj') }}
 
     - name: ls
-      run: dir *\\x64\\Release\\
+      run: dir VSUnitTest\\x64\\Release\\
       
     - name: Build
       # Add additional options to the MSBuild command line here (like platform or verbosity level).
